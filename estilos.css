@@ -1,21 +1,16 @@
-/* Estilos Base */
 html {
     scroll-behavior: smooth;
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
 }
-
 body {
     background: #0b1315;
     color: white;
 }
-
-/* NAVBAR */
 .navbar {
     background: rgba(0, 0, 0, 0.9);
     height: 80px;
@@ -27,7 +22,6 @@ body {
     top: 0;
     z-index: 1000;
 }
-
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -35,31 +29,25 @@ body {
     width: 90%;
     max-width: 1200px;
 }
-
 .nav-logo {
     color: #00d4ff;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
 }
-
 .nav-menu {
     display: flex;
     list-style: none;
 }
-
 .nav-menu li a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
 }
-
 .nav-menu li a.active {
     color: #00d4ff;
     border-bottom: 2px solid #00d4ff;
 }
-
-/* WRAPPER PRINCIPAL CON FONDO */
 .main-wrapper {
     padding: 120px 20px 60px;
     min-height: 100vh;
@@ -68,13 +56,10 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-
-/* HEADER DE PERFIL */
 .profile-header {
     text-align: center;
     margin-bottom: 50px;
 }
-
 .profile-img-container img {
     width: 150px;
     height: 150px;
@@ -84,13 +69,10 @@ body {
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
     margin-bottom: 15px;
 }
-
 .profile-text h1 {
     font-size: 2.5rem;
     color: #00d4ff;
 }
-
-/* PANEL CENTRAL (FLEXBOX) */
 .content-panel {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -100,35 +82,29 @@ body {
     margin: 0 auto 40px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .content-flex {
     display: flex;
     gap: 40px;
     align-items: center;
     flex-wrap: wrap;
 }
-
 .video-box {
     flex: 1;
     min-width: 300px;
 }
-
 .video-box video {
     width: 100%;
     border-radius: 10px;
     border: 1px solid #00d4ff;
 }
-
 .info-box {
     flex: 1;
     min-width: 300px;
 }
-
 .info-box h2 {
     color: #00d4ff;
     margin-bottom: 15px;
 }
-
 .btn-main {
     display: inline-block;
     padding: 12px 25px;
@@ -140,40 +116,32 @@ body {
     margin-top: 20px;
     transition: 0.3s;
 }
-
 .btn-main:hover {
     background: #fff;
     box-shadow: 0 0 15px #00d4ff;
 }
-
-/* PANEL DE ESTUDIOS */
 .studies-panel {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
-
 .studies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
-
 .study-card {
     background: rgba(0, 212, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
     border-left: 5px solid #00d4ff;
 }
-
-/* FOOTER PROFESIONAL */
 .main-footer {
     background: #050505;
     padding: 60px 20px 20px;
     border-top: 2px solid #00d4ff;
 }
-
 .footer-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -181,36 +149,29 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .footer-brand h3 {
     color: #00d4ff;
     margin-bottom: 15px;
 }
-
 .footer-links ul {
     list-style: none;
 }
-
 .footer-links ul li {
     margin-bottom: 10px;
 }
-
 .footer-links a {
     color: #ccc;
     text-decoration: none;
     transition: 0.3s;
 }
-
 .footer-links a:hover {
     color: #00d4ff;
     padding-left: 5px;
 }
-
 .footer-contact p {
     margin-bottom: 10px;
     color: #ccc;
 }
-
 .footer-bottom {
     text-align: center;
     margin-top: 50px;
