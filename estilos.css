@@ -163,7 +163,7 @@ body {
     border-left: 5px solid #00d4ff;
 }
 
-/* FOOTER */
+/* FOOTER PROFESIONAL */
 .main-footer {
     background: #050505;
     padding: 60px 20px 20px;
@@ -171,18 +171,47 @@ body {
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.footer-bottom {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #222;
-    color: white;
+.footer-brand h3 {
+    color: #00d4ff;
+    margin-bottom: 15px;
 }
 
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #00d4ff;
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    font-size: 0.9rem;
+    color: white;
+}
