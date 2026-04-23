@@ -206,3 +206,9 @@ body {
     font-size: 0.9rem;
     color: white;
 }
+/* Esto hace que todas las imágenes se adapten al ancho de la pantalla */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
