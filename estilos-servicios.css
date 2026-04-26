@@ -1,11 +1,3 @@
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column; /* Cambia de horizontal a vertical */
-    }
-    .contact-info, .contact-form-wrapper {
-        width: 50%; /* Ocupan todo el ancho disponible */
-    }
-}
 * {
     margin: 0;
     padding: 0;
