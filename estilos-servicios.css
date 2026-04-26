@@ -3,7 +3,7 @@
         flex-direction: column; /* Cambia de horizontal a vertical */
     }
     .contact-info, .contact-form-wrapper {
-        width: 80%; /* Ocupan todo el ancho disponible */
+        width: 50%; /* Ocupan todo el ancho disponible */
     }
 }
 * {
