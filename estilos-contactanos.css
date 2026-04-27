@@ -1,3 +1,12 @@
+html {
+    scroll-behavior: smooth; /*desplazamiento suave*/
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*sin bordes externos*/
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
 .navbar {
     background-color: #1a1a1a;
     padding: 1rem 0;
