@@ -7,12 +7,20 @@ html {
     box-sizing: border-box; /*sin bordes externos*/
     font-family: 'Segoe UI', Tahoma, sans-serif;
 }
-.navbar {
-    background-color: #1a1a1a;
-    padding: 1rem 0;
-    position: sticky;
+body {
+    background: #0b1315;
+    color: white;
+}
+.nav-bar {
+    background: rgba(0, 0, 0, 0.9); /*color negro con opacidad*/
+    height: 80px; /*altura de 80 pixeles para la barra*/
+    display: flex;
+    justify-content: center; /*centrado horizontal*/
+    align-items: center; /*centrado vertical*/
+    position: fixed; /*posición fija en la pantalla*/
+    width: 100%; /*ocupa todo el espacio*/
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /*para que no quede detras de otros elementos*/
 }
 .nav-container {
     max-width: 1200px;
