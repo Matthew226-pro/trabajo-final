@@ -179,30 +179,28 @@ body {
     color: white;
     font-size: 0.9rem;
 }
-@media (max-width: 768px) {
-    /* Información y Formulario: De lado a lado a arriba y abajo */
+@media (max-width: 850px) {
+    /* Cambiamos el contenedor pero respetamos el fondo 'central-box' */
     .contact-container {
-        flex-direction: column;
-        padding: 15px;
+        flex-direction: column !important;
+        align-items: stretch;
     }
     .contact-info, .form {
-        width: 100%;
-        margin-bottom: 30px;
+        width: 100% !important;
+        max-width: 100%;
     }
-    /* Los Mapas: Importante para evitar scroll lateral */
+    /* Los mapas deben ser flexibles pero mantener su estilo */
     .maps-flex {
+        display: flex;
         flex-direction: column;
-        gap: 20px;
     }
     .map-item {
-        width: 100%;
+        width: 100% !important;
+        margin-bottom: 20px;
     }
-    /* Técnica del video: Hacer que el iframe sea flexible */
+    /* El iframe debe heredar el ancho del contenedor */
     .map-item iframe {
-        width: 100% !important; /* Sobrescribe el width="600" del HTML */
-        height: 300px; /* Altura más cómoda para móvil */
-    }
-    .location-box-margin {
-        margin-top: 20px;
+        width: 100% !important;
+        height: 350px;
     }
 }
