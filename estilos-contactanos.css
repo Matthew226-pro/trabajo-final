@@ -23,62 +23,59 @@ body {
     z-index: 1000; /*para que no quede detras de otros elementos*/
 }
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*los elementos a los extremos (logo izquierda y menú a la derecha en este caso)*/
     align-items: center;
-    padding: 0 20px;
+    width: 90%;
+    max-width: 1200px; /*evita que el contenido se separe tanto por más que la pantalla supere los 1200 pixeles*/
 }
-.nav-logo {
-    color: #00d4ff; /* Color cian para unificar con el diseño */
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
+.logo {
+    color: #00d4ff;
+    font-size: 1.5rem; /*24 pixeles de tamaño aprox*/
+    font-weight: bold; /*letra en negrita*/
+    text-decoration: none; /*sin efectos por defecto (en este caso el subrayado :v)*/
 }
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+.menu {
+    display: flex; /*uno al lado del otro*/
+    list-style: none; /*tmb le quita el efecto por defecto (en este caso las bolitas de la lista xd)*/
 }
-.nav-menu a {
+.menu li a {
     color: #fff;
     text-decoration: none;
+    padding: 10px 10px; /* 10pixeles de espacio arriba/abajo y 10 pixeles de espacio a los lados*/
     font-weight: 500;
-    transition: color 0.3s;
 }
-.nav-menu a.active, .nav-menu a:hover {
+.menu li a.active {
+    border-bottom: 2px solid #00d4ff; /*crea una linea debajo del texto (2 piexeles)*/
     color: #00d4ff;
 }
-.contact-section {
-    padding: 60px 0;
-    background: linear-gradient(rgba(15, 32, 39, 0.8), rgba(15, 32, 39, 0.8)), 
-               url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80');
-    background-size: cover;
-    color: white;
+.contact {
+    padding: 140px 20px 80px; /*140px de arriba, 20px a los lados(para que no toque el borde en moviles) y 80px abajo para saparar de la siguiente caja*/
+    min-height: 100vh; /*que mida el 100% de la pantalla como minimo*/ 
+    background: linear-gradient(rgba(11, 19, 21, 0.8), rgba(11, 19, 21, 0.8)), 
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80'); /*degradado en capaz para que la imagem tenga una transparencia semioscura*/
+    background-size: cover; /*para que la imagen no se deforme cubriendo todo al estirarse o encojerse*/
+    background-position: center;
+    background-attachment: fixed; /*Efecto Parallax (la imagen no se movera ni arriba ni abajo aún cuando el contenido de la pagina si)*/
+    justify-content: center;
 }
-.contact-container {
+.contact-container { 
+      background: rgba(255, 255, 255, 0.05); /*fondo casi transparente*/
+    backdrop-filter: blur(10px); /*le da el toque de desenfoque como vidrio*/
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px; /*redondea las esquinas del panel*/
+    padding: 40px;
     max-width: 1000px;
     width: 90%;
-    margin: 0 auto; 
-    background: rgba(255, 255, 255, 0.05); /* Fondo blanco con mucha transparencia */
-    backdrop-filter: blur(15px);           /* Esto hace que el fondo se vea borroso */
-    -webkit-backdrop-filter: blur(15px);   /* Compatibilidad para Safari */
-    border-radius: 15px;
-    padding: 40px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
-    border: 1px solid rgba(255, 255, 255, 0.1); 
+    margin: 0 auto; 
 }
 .location-box-margin {
-    margin-top: 75px !important; 
+    margin-top: 75px !important;  /* Separación de "3 líneas" entre el primer y segundo bloque */
 }
 .contact-info {
-    flex: 1;
-    min-width: 300px;
+    flex: 1; /*usara el 50% del espacio*/
+    min-width: 300px; /*indica que si el espacio es menor a 300 ya no se encoge más*/
 }
 .contact-info h2 {
     color: #00d4ff;
@@ -88,7 +85,7 @@ body {
 .info-item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 15px; /*separación de 15px de los iconos con el texto*/
     margin-bottom: 15px;
 }
 .info-item i {
@@ -105,11 +102,7 @@ body {
     font-size: 1.5rem;
     transition: transform 0.3s, color 0.3s;
 }
-.social-media a:hover {
-    color: #00d4ff;
-    transform: translateY(-3px);
-}
-.contact-form-wrapper {
+.form {
     flex: 1;
     min-width: 300px;
 }
@@ -139,6 +132,9 @@ body {
 .btn-submit:hover {
     background: #0099cc;
 }
+/* =========================================
+   BLOQUE 2: UBICACIONES Y MAPAS
+   ========================================= */
 .location-full-content {
     width: 100%; /* Ocupa todo el ancho interno del cuadro */
 }
@@ -170,6 +166,9 @@ body {
     border-radius: 12px;
     border: 1px solid rgba(0, 212, 255, 0.3);
 }
+/* =========================================
+   FOOTER
+   ========================================= */
 .footer {
     background: #1a1a1a;
     padding: 20px 0;
@@ -180,15 +179,30 @@ body {
     color: white;
     font-size: 0.9rem;
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
+    /* Información y Formulario: De lado a lado a arriba y abajo */
+    .contact-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .contact-info, .form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    /* Los Mapas: Importante para evitar scroll lateral */
     .maps-flex {
         flex-direction: column;
-        align-items: center;
+        gap: 20px;
     }
     .map-item {
         width: 100%;
     }
-    .contact-container {
-        padding: 20px;
+    /* Técnica del video: Hacer que el iframe sea flexible */
+    .map-item iframe {
+        width: 100% !important; /* Sobrescribe el width="600" del HTML */
+        height: 300px; /* Altura más cómoda para móvil */
     }
-} 
+    .location-box-margin {
+        margin-top: 20px;
+    }
+}
