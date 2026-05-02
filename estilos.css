@@ -1,99 +1,100 @@
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /*desplazamiento suave*/
 }
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box; /*sin bordes externos*/
+    font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 body {
     background: #0b1315;
     color: white;
 }
-.navbar {
-    background: rgba(0, 0, 0, 0.9);
-    height: 80px;
+.nav-bar {
+    background: rgba(0, 0, 0, 0.9); /*color negro con opacidad*/
+    height: 80px; /*altura de 80 pixeles para la barra*/
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 100%;
+    justify-content: center; /*centrado horizontal*/
+    align-items: center; /*centrado vertical*/
+    position: fixed; /*posición fija en la pantalla*/
+    width: 100%; /*ocupa todo el espacio*/
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /*para que no quede detras de otros elementos*/
 }
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*los elementos a los extremos (logo izquierda y menú a la derecha en este caso)*/
     align-items: center;
     width: 90%;
-    max-width: 1200px;
+    max-width: 1200px; /*evita que el contenido se separe tanto por más que la pantalla supere los 1200 pixeles*/
 }
-.nav-logo {
+.logo {
     color: #00d4ff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
+    font-size: 1.5rem; /*24 pixeles de tamaño aprox*/
+    font-weight: bold; /*letra en negrita*/
+    text-decoration: none; /*sin efectos por defecto (en este caso el subrayado :v)*/
 }
-.nav-menu {
-    display: flex;
-    list-style: none;
+.menu {
+    display: flex; /*uno al lado del otro*/
+    list-style: none; /*tmb le quita el efecto por defecto (en este caso las bolitas de la lista xd)*/
 }
-.nav-menu li a {
+.menu li a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 10px; /* 10pixeles de espacio arriba/abajo y 10 pixeles de espacio a los lados*/
+    font-weight: 500;
 }
-.nav-menu li a.active {
+.menu li a.active {
     color: #00d4ff;
-    border-bottom: 2px solid #00d4ff;
+    border-bottom: 2px solid #00d4ff; /*crea una linea debajo del texto (2 piexeles)*/
 }
-.main-wrapper {
-    padding: 120px 20px 60px;
-    min-height: 100vh;
+.cartel {
+    padding: 120px 20px 60px; /*120px de arriba, 20px a los lados(para que no toque el borde en moviles) y 60px abajo para saparar de la siguiente caja*/
+    min-height: 100vh; /*que mida el 100% de la pantalla como minimo*/
     background: linear-gradient(rgba(11, 19, 21, 0.8), rgba(11, 19, 21, 0.8)), 
-                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80');
-    background-size: cover;
-    background-attachment: fixed;
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80'); /*degradado en capaz para que la imagem tenga una transparencia semioscura*/
+    background-size: cover; /*para que la imagen no se deforme cubriendo todo al estirarse o encojerse*/
+    background-attachment: fixed; /*Efecto Parallax (la imagen no se movera ni arriba ni abajo aún cuando el contenido de la pagina si)*/
 }
-.profile-header {
+.he {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 50px; /*50 pixeles hacia abajo*/
 }
-.profile-img-container img {
+.he-img-container img {
     width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    height: 150px; /*fija la imagen junto a width*/
+    border-radius: 50%; /*le da forma de circulo*/
     border: 3px solid #00d4ff;
-    object-fit: cover;
+    object-fit: cover; /*adapta cualquier imagen para que cuadre en el circulo*/
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
     margin-bottom: 15px;
 }
-.profile-text h1 {
+.he-text h1 {
     font-size: 2.5rem;
     color: #00d4ff;
 }
-.content-panel {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
+.panel {
+    background: rgba(255, 255, 255, 0.05); /*fondo casi transparente*/
+    backdrop-filter: blur(10px); /*le da el toque de desenfoque como vidrio*/
+    border-radius: 20px;  /*redondea las esquinas del panel*/
     padding: 40px;
     max-width: 1100px;
     margin: 0 auto 40px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.content-flex {
-    display: flex;
-    gap: 40px;
+.flex {
+    display: flex; /*modo flexible para que el video y el texto esten lado a lado */
+    gap: 40px; /*separación del video y texto */
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*ayuda a que en moviles si no hay espacio para el video y texto juntos, el texto se pone bajo el video*/
 }
 .video-box {
-    flex: 1;
-    min-width: 300px;
+    flex: 1; /*ambos bloques usaran el 50% cada uno*/
+    min-width: 300px; /*indica que si el espacio es menor a 300 la caja ya no se encoge más*/
 }
 .video-box video {
-    width: 100%;
+    width: 100%; /*el video ocupara todo el ancho de su bloque*/
     border-radius: 10px;
     border: 1px solid #00d4ff;
 }
@@ -105,8 +106,8 @@ body {
     color: #00d4ff;
     margin-bottom: 15px;
 }
-.btn-main {
-    display: inline-block;
+.boton {
+    display: inline-block; /*el boton margen y fondo sin ocupar toda la linea de su bloque*/
     padding: 12px 25px;
     background: #00d4ff;
     color: black;
@@ -114,29 +115,30 @@ body {
     font-weight: bold;
     border-radius: 5px;
     margin-top: 20px;
-    transition: 0.3s;
+    transition: 0.3s; /*hace que el cambio de color del relleno sea suave*/
 }
-.btn-main:hover {
+.boton:hover {
     background: #fff;
     box-shadow: 0 0 15px #00d4ff;
 }
-.studies-panel {
+.estudios {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
-.studies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.estudios-grid {
+    display: grid; /*filas y columnas*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*auto-fit hace el diseño responsivo, minmax(250px, 1fr) cada bloque como minimo va a medir 250px y se van a estirar si sobran espacio*/
+    gap: 20px; /*separa los bloques con 20px*/
     margin-top: 20px;
 }
-.study-card {
-    background: rgba(0, 212, 255, 0.1);
+.estudios-card {
+    background: rgba(0, 212, 255, 0.1); /*fondo con 10% de opacidad*/
     padding: 20px;
     border-radius: 10px;
-    border-left: 5px solid #00d4ff;
+    border-left: 5px solid #00d4ff; /*linea gruesa a la izquiera en vez de borde en todos lados*/
 }
+/* FOOTER PROFESIONAL */
 .main-footer {
     background: #050505;
     padding: 60px 20px 20px;
@@ -179,4 +181,35 @@ body {
     border-top: 1px solid #222;
     font-size: 0.9rem;
     color: white;
+}
+@media (max-width: 768px) {
+    /* Ajuste del Header (Foto y Nombre) */
+    .he {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    /* El panel que contiene Video e Info Box */
+    .panel .flex {
+        flex-direction: column; /* Apila video sobre texto */
+        gap: 30px;
+    }
+    .video-box, .info-box {
+        width: 100%; /* Ocupan todo el ancho móvil */
+    }
+    video {
+        width: 100%; /* Video responsivo */
+        height: auto;
+    }
+    /* Grid de Estudios: de 2 columnas a 1 */
+    .estulios-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    /* Footer: Apilar secciones */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
 }
