@@ -179,28 +179,3 @@ body {
     color: white;
     font-size: 0.9rem;
 }
-@media (max-width: 850px) {
-    /* Cambiamos el contenedor pero respetamos el fondo 'central-box' */
-    .contact-container {
-        flex-direction: column !important;
-        align-items: stretch;
-    }
-    .contact-info, .form {
-        width: 100% !important;
-        max-width: 100%;
-    }
-    /* Los mapas deben ser flexibles pero mantener su estilo */
-    .maps-flex {
-        display: flex;
-        flex-direction: column;
-    }
-    .map-item {
-        width: 100% !important;
-        margin-bottom: 20px;
-    }
-    /* El iframe debe heredar el ancho del contenedor */
-    .map-item iframe {
-        width: 100% !important;
-        height: 350px;
-    }
-}
