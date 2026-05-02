@@ -182,34 +182,22 @@ body {
     font-size: 0.9rem;
     color: white;
 }
-@media (max-width: 768px) {
-    /* Ajuste del Header (Foto y Nombre) */
-    .he {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-    /* El panel que contiene Video e Info Box */
+@media (max-width: 900px) {
+    /* Mantenemos el fondo y bordes, solo cambiamos la dirección */
     .panel .flex {
-        flex-direction: column; /* Apila video sobre texto */
-        gap: 30px;
+        display: block !important; /* Cambiamos a block para evitar conflictos de flex */
     }
-    .video-box, .info-box {
-        width: 100%; /* Ocupan todo el ancho móvil */
+    .video-box {
+        width: 100% !important;
+        margin-bottom: 30px;
     }
-    video {
-        width: 100%; /* Video responsivo */
-        height: auto;
+    .info-box {
+        width: 100% !important;
+        padding: 20px; /* Asegura que el texto no pegue a los bordes */
     }
-    /* Grid de Estudios: de 2 columnas a 1 */
-    .estulios-grid {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-    /* Footer: Apilar secciones */
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
+    /* Tu grid de estudios para que no se amontone */
+    .estudios-grid {
+        display: grid;
+        grid-template-columns: 1fr !important;
     }
 }
