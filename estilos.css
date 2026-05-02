@@ -182,3 +182,25 @@ body {
     font-size: 0.9rem;
     color: white;
 }
+@media (max-width: 900px) {
+    /* Mantenemos el fondo y bordes, solo cambiamos la dirección */
+    .panel .flex {
+        display: block !important; /* Cambiamos a block para evitar conflictos de flex */
+    }
+
+    .video-box {
+        width: 100% !important;
+        margin-bottom: 30px;
+    }
+
+    .info-box {
+        width: 100% !important;
+        padding: 20px; /* Asegura que el texto no pegue a los bordes */
+    }
+
+    /* Tu grid de estudios para que no se amontone */
+    .estudios-grid {
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+}
