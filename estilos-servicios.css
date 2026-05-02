@@ -169,21 +169,16 @@ body {
     color: white;
 }
 @media (max-width: 768px) {
-    .titulo {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-    }
-    /* Contenedor de las flip-cards */
+    /* Solo cambiamos el contenedor de las cartas, NO la carta en sí */
     .servicios-ciber {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 40px; /* Más espacio para que luzcan los efectos */
     }
-    /* Ajuste de tamaño para que no se vean gigantes en móvil */
+
+    /* No tocamos el height ni el width interno para que el efecto 3D siga funcionando */
     .flip-card {
-        width: 90%;
-        max-width: 320px;
-        height: 350px; /* Ajusta según el contenido de tus cartas */
+        margin: 0 auto;
     }
 }
