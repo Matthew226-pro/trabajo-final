@@ -62,8 +62,8 @@ body {
     margin-bottom: 50px; /*50 pixeles hacia abajo*/
 }
 .he-img-container img {
-    width: 150px;
-    height: 150px; /*fija la imagen junto a width*/
+    width: 400px;
+    height: 400px; /*fija la imagen junto a width*/
     border-radius: 50%; /*le da forma de circulo*/
     border: 3px solid #00d4ff;
     object-fit: cover; /*adapta cualquier imagen para que cuadre en el circulo*/
